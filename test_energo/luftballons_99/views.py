@@ -8,12 +8,15 @@ from rest_framework import mixins, generics
 from .models import LuftBallons, LuftBallonsGuess
 from .serializers import LuftBallonsGuessSerializer, LuftBallonsListSerializer, LuftBallonsSerializer
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
-
+from rest_framework.authentication import SessionAuthentication
+from rest_framework_simplejwt.authentication import JWTAuthentication
 # работа со всеми шариками
 class LuftBallonsList(mixins.CreateModelMixin,
                   generics.GenericAPIView):
     serializer_class = LuftBallonsSerializer
     permission_classes = [IsAdminUser]
+    authentication_classes = [JWTAuthentication, SessionAuthentication]
+
     queryset = LuftBallons.objects.all()
     
     # получить
@@ -32,6 +35,7 @@ class LuftBallonsDetail(mixins.RetrieveModelMixin,
                     generics.GenericAPIView):
     queryset = LuftBallons.objects.all()
     permission_classes = [IsAuthenticated]
+    authentication_classes = [JWTAuthentication, SessionAuthentication]
 
     def get(self, request, pk=None):
         try:
@@ -47,6 +51,8 @@ class LuftBallonsGuess(mixins.ListModelMixin,
                   generics.GenericAPIView):
     serializer_class = LuftBallonsGuessSerializer
     permission_classes = [IsAuthenticated]
+    authentication_classes = [JWTAuthentication, SessionAuthentication]
+
     queryset = LuftBallonsGuess.objects.all()
 
     # чтобы знать какие были попытки

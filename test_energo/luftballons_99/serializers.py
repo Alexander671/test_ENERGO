@@ -102,7 +102,6 @@ class LuftBallonsGuessSerializer(serializers.ModelSerializer):
 
          # получаем соответствующий элемент из шаров
          obj = LuftBallons.objects.get(id = obj_guess.ballon.id)
-         print(obj.ball , guessed)
          # проверяем, угадали ли мы
          if obj.ball == guessed:
             obj.guessed = True

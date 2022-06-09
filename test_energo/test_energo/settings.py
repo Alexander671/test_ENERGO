@@ -37,8 +37,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'quadratic_equation',
     'luftballons_99',
+    'rest_framework_simplejwt',
     'accounts'
 ]
+from datetime import timedelta
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

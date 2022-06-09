@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "27fc8681-4d11-460e-a573-309f8b37c4a3",
+		"name": "test_filter_message",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ВЫБРАТЬ ОБЪЕКТ, ЧТОБЫ СЕРВИС ПОПЫТАЛСЯ УГАДАТЬ ЦВЕТ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0ODAxODMxLCJpYXQiOjE2NTQ3OTQ2MzEsImp0aSI6ImQ0YTM3Y2ZkOTM5MDQ0NDg4MmYyMDkzMGNhOGNlYzIxIiwidXNlcl9pZCI6MX0.t_j1S6MjWeqaC8nz5U0bQqEiez8KR4elARGG0q0e_e8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ballon\" : 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/luftballons/guess",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"luftballons",
+						"guess"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lupa",
+							"disabled": true
+						},
+						{
+							"key": "official",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "СОЗДАТЬ НОВЫЙ НАБОР ШАРОВ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0Nzk0MjYwLCJpYXQiOjE2NTQ3OTM5NjAsImp0aSI6IjQyZjQxZmNjZWQwYTRjZDdiODlkNjMyYzI1MzM5MjhmIiwidXNlcl9pZCI6MX0.RjZnuxA4s6_dEBnk8lTVWV87YMy3YNwvF6lFKtQRR9Y",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/luftballons/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"luftballons",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lupa",
+							"disabled": true
+						},
+						{
+							"key": "official",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ПОЛУЧИТЬ ШАРЫ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0Nzk0NjcxLCJpYXQiOjE2NTQ3OTQzNzEsImp0aSI6IjE2YjY0NTZlMGZhODQzZjI4NzczODJiMjU1ZjBiYWUzIiwidXNlcl9pZCI6MX0.ppBVfEMY-O1vbTbX7pDo47UqiFEAujBz-rbpFkEnftI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/luftballons/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"luftballons",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lupa",
+							"disabled": true
+						},
+						{
+							"key": "official",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ПОЛУЧИТЬ ШАР ПО ID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0Nzk0NjcxLCJpYXQiOjE2NTQ3OTQzNzEsImp0aSI6IjE2YjY0NTZlMGZhODQzZjI4NzczODJiMjU1ZjBiYWUzIiwidXNlcl9pZCI6MX0.ppBVfEMY-O1vbTbX7pDo47UqiFEAujBz-rbpFkEnftI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/luftballons/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"luftballons",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lupa",
+							"disabled": true
+						},
+						{
+							"key": "official",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ОТПРАВИТЬ КВАДРАТНЫЕ УРАВНЕНИЯ Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"a\" : 1,\n    \"b\" : 4,\n    \"c\" : 3\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/equations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"equations",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lupa",
+							"disabled": true
+						},
+						{
+							"key": "official",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ПОЛУЧИТЬ ВСЕ КВАДРАТНЫЕ УРАВНЕНИЯ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/equations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"equations"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ПОЛУЧИТЬ ТОКЕН",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\" : \"alexander\",\n\"password\" : 1\n\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/?username=alexander&password=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "alexander"
+						},
+						{
+							"key": "password",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
